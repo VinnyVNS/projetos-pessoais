@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculo de Watts</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Circuitos Elétricos</h1>
+        <h2>Cálculo de Circuitos Elétricos em Série e Paralelo</h2>
+
+    </header>
+    
+    <main>
+
+        <section id="formulario">
+
+            <div class="tipoCircuito">
+                <input type="radio" name="tipo" id="serie" value="serie" checked>
+                <label for="serie"><strong>Circuito em Série</strong></label>
+            </div>
+
+            <div class="tipoCircuito">
+                <input type="radio" name="tipo" id="paralelo" value="paralelo">
+                <label for="paralelo"><strong>Circuito em Paralelo</strong></label>
+            </div>
+            
+            <div class="campo">
+                <label><strong>Digite a voltagem da sua fonte:</strong></label>
+                <input type="number" id="volts">
+                <output id="erroVoltagem" class="erro"></output>
+            </div>
+
+            <div class="campo">
+                <label><strong>Digite o número de resistências presentes no circuito:</strong></label>
+                <input type="number" id="numResistencias" min="1" max="50" oninput="gerarInputs()">
+                <output id="erroResistencias" class="erro"></output>
+            </div>
+
+            <div id="containerResistencias"></div>
+            <output id="erroValorResistencias" class="erro"></output>
+
+            <button onclick="calcular()">Calcular</button>
+
+            <script src="watts.js"></script>
+
+        </section>
+
+        <section id="final">
+
+            <div id="resultados"></div>
+            <button onclick="resetar()" id="btn-reset">Resetar</button>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
