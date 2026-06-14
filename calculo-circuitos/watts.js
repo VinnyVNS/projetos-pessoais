@@ -4,8 +4,10 @@ function gerarInputs(){
     container.innerHTML = ``
     container.style.display = "block"
 
+    document.getElementById("erroValorResistencias").innerHTML = ``
+
     if(qtd > 50){
-        document.getElementById("erroResistencias").innerHTML = `Valor máximo: 50`
+        document.getElementById("erroResistencias").innerHTML = `Número máximo de resistências: 50`
     }
     else{
         document.getElementById("erroResistencias").innerHTML = ``
@@ -23,7 +25,7 @@ function calcular(){
     let resultadosDiv = document.getElementById("resultados")
     
     if(volts <= 0 || isNaN(volts)){
-        document.getElementById("erroVoltagem").innerHTML = `Digite uma voltagem válida.`
+        document.getElementById("erroVoltagem").innerHTML = `O valor da tensão está vazio ou é inválido! Preencha o campo corretamente.`
         return
     }
     else{
@@ -31,7 +33,7 @@ function calcular(){
     }
     
     if(qtd <= 0 || isNaN(qtd)){
-        document.getElementById("erroResistencias").innerHTML = `Digite um valor positivo.`
+        document.getElementById("erroResistencias").innerHTML = `O número de resistências está vazio ou é inválido! Preencha o campo corretamente.`
         return
     }
     else{

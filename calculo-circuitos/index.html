@@ -32,14 +32,18 @@
             </div>
             
             <div class="campo">
-                <label><strong>Digite a voltagem da sua fonte:</strong></label>
+                <label><strong>Digite a tensão da fonte:</strong></label>
                 <input type="number" id="volts">
+                <span><strong>E</strong></span>
+                <br>
                 <output id="erroVoltagem" class="erro"></output>
             </div>
 
             <div class="campo">
                 <label><strong>Digite o número de resistências presentes no circuito:</strong></label>
                 <input type="number" id="numResistencias" min="1" max="50" oninput="gerarInputs()">
+                <span><strong>(Máx: 50)</strong></span>
+                <br>
                 <output id="erroResistencias" class="erro"></output>
             </div>
 
